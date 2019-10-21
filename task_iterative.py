@@ -17,10 +17,11 @@ def mfcc(input_file):
 				sign = librosa.feature.mfcc(y=y, sr=sr)
 				np.save(filename + '/' + file[:-4], sign)
 
-start_time = time.time()
+
 
 print("Enter dir name:")
 dirname = input()
+start_time = time.time()
 mfcc(dirname)
 
 print("--- %s seconds ---" % (time.time() - start_time))
